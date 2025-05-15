@@ -1,0 +1,25 @@
+projeto cadastro de notas de alunos (projeto para professor lançar notas)
+
+script em py que permita as seguintes operações:
+
+- menu interativo com usuario, com cadastro de professor ou login
+	- login (se já ouver dados no banco de dados)
+	- cadastro (se não houver dados no banco)
+
+- opcao 1 -> lançar nota do semestre (total de 3 notas / 3)
+	- deve ser lançada para um aluno específico, ou seja, o professor vai enviar a nota para um rm específico
+	- deve ter uma logica para receber as 3 notas e dividir por 3
+	- ao ser lançada, a nota deve aparecer no banco de dados para um respectivo aluno
+	
+	ideia de tabela para banco -> id | rm | id_professor | nota_final
+	
+- opcao 2/3 -> remover / atualizar nota de um aluno específico
+	- deve remover ou atualizar a nota de um aluno a partir do RM do aluno, alterando no banco de dados tambem
+	- o professor deve (se for o caso de atualizaçao) inserir novas 3 notas
+	
+- opcao 4 -> sair do sistema
+
+tabela turma: id(pk) | nome_turma | id_professor(fk)
+tabela professor: id(pk) | nome | pf | senha
+tabela aluno: id(pk) | nome | rm | id_turma(fk)
+tabela notas: id(pk) | id_aluno(fk) | id_professor(fk) | nota1 | nota2 | nota3 | media
