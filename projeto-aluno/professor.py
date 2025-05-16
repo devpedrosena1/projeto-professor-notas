@@ -8,3 +8,5 @@ def cadastrar_professor():
         nome = input('Informe o seu nome: ')
         pf = input('Informe o seu PF (Cadastro de Professor)')
         senha = getpass.getpass('Digite uma senha (guarde-a)')
+    except Exception as e:
+        print(f'{e}')
